@@ -1,0 +1,2 @@
+gfortran -m64 -w -O3 -o <exec> <files>
+gfortran -O3 -w -fopenmp -fmax-stack-var-size=32768 -o <exec> <files>

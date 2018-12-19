@@ -4,6 +4,8 @@ RUN mkdir /root/pksim
 RUN mkdir /root/pksim/Rlibraries
 WORKDIR /root/pksim
 RUN yum -y install R
-COPY test.r test.r
 COPY install.r install.r
-# RUN Rscript test.r
+COPY compile.r compile.r
+COPY FortConfig.txt /root/.config/Pmetrics/FortConfig.txt
+RUN Rscript install.r
+RUN Rscript compile.r
